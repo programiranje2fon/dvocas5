@@ -24,7 +24,7 @@ public class IstorijskiDogadjajTest {
 		instance = null;
 	}
 
-	@Test
+	@Test (timeout = 2000)
 	public void konstruktor_IstorijskiDogadjaj() {
 		instance = new IstorijskiDogadjaj("Oslobadjanje Beograda", 1945, 10, 20);
 		
@@ -34,7 +34,7 @@ public class IstorijskiDogadjajTest {
 		assertEquals("Konstruktor ne postavlja dan kako treba", 20, instance.datum.get(GregorianCalendar.DAY_OF_MONTH));		
 	}
 	
-	@Test
+	@Test (timeout = 2000)
 	public void konstruktor_IstorijskiDogadjaj_NazivNULL() {
 		PrintStream pom = System.out;
 		try {
@@ -61,7 +61,7 @@ public class IstorijskiDogadjajTest {
 		}
 	}
 	
-	@Test
+	@Test (timeout = 2000)
 	public void konstruktor_IstorijskiDogadjaj_NazivPrekratak() {
 		PrintStream pom = System.out;
 		try {
@@ -88,7 +88,7 @@ public class IstorijskiDogadjajTest {
 		}
 	}
 
-	@Test
+	@Test (timeout = 2000)
 	public void konstruktor_IstorijskiDogadjaj_GodinaNegativna() {
 		PrintStream pom = System.out;
 		try {
@@ -115,7 +115,7 @@ public class IstorijskiDogadjajTest {
 		}
 	}
 	
-	@Test
+	@Test (timeout = 2000)
 	public void konstruktor_IstorijskiDogadjaj_MesecNegativan() {
 		PrintStream pom = System.out;
 		try {
@@ -142,7 +142,7 @@ public class IstorijskiDogadjajTest {
 		}
 	}
 	
-	@Test
+	@Test (timeout = 2000)
 	public void konstruktor_IstorijskiDogadjaj_DanNegativan() {
 		PrintStream pom = System.out;
 		try {
@@ -169,7 +169,7 @@ public class IstorijskiDogadjajTest {
 		}
 	}
 
-	@Test
+	@Test (timeout = 2000)
 	public void metoda_vratiPreKoliko() {
 		int trenutnaGodina = new GregorianCalendar().get(GregorianCalendar.YEAR);
 		
@@ -177,7 +177,7 @@ public class IstorijskiDogadjajTest {
 				trenutnaGodina - 1945, instance.vratiPreKoliko());
 	}
 
-	@Test
+	@Test (timeout = 2000)
 	public void metoda_vratiNaopako() {
 		assertEquals("Metoda ne vraca naziv naopako", "adargoeB ejnajdabolsO", instance.vratiNaopako());
 	}
