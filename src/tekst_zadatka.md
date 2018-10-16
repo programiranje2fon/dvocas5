@@ -39,6 +39,6 @@ Napraviti klasu **IstorijskiDogadjaj** u paketu **zadatak2** koja ima:
 
 4. Metodu **vratiPreKoliko** koja kao povratnu vrednost vraća pre koliko godina se desio taj istorijski događaj (u odnosu na trenutnu godinu).
 
-5. Metodu **ispisiNaopako** koja na ekranu ispisuje naziv istorijskog događaja, ali tako da slova budu ispisana u obrnutom redosledu.
+5. Metodu **vratiNaopako** koja vraća String sa nazivom istorijskog događaja, ali tako da slova budu u obrnutom redosledu.
 
 Napraviti klasu **ProbaIstorijskiDogadjaj** u paketu **zadatak2** koja u main metodi kreira objekat klase IstorijskiDogadjaj: "Bombardovanje Beograda u II svetskom ratu", datuma 6.4.1941. Potrebno je ispisati na ekranu pre koliko godina se desio taj događaj, kao i naziv događaja ali tako da slova budu ispisana u obrnutom redosledu.
