@@ -5,25 +5,25 @@
 
 Napraviti klasu **TwitterPoruka** u paketu **zadatak1** koja ima:
 
-1. Atribut **korisnik** koji predstavlja korisničko ime osobe koja je napisala poruku. Početna vrednost je reč "nepoznato".**(klasa String, dodeljivanje vrednosti String promenljivoj, String vrednosti pod duplim navodnicima)**
+1. Atribut **korisnik** koji predstavlja korisničko ime osobe koja je napisala poruku. Početna vrednost je reč "nepoznato".
 
 2. Atribut **poruka** koji predstavlja poruku koju je korisnik napisao. Početna vrednost je reč "nepoznato".
 
-3. Atribut **vreme** koji predstavlja datum i vreme kad je poruka objavljena. Početna vrednost je trenutni datum i vreme.**(klasa GregorianCalendar, inicijalizacija GregorianCalendar klase, “import java.util.*” i zastarela klasa Date)**
+3. Atribut **vreme** koji predstavlja datum i vreme kad je poruka objavljena. Početna vrednost je trenutni datum i vreme.
 
-4. Metodu **postaviKorisnika** koja kao parametar prima korisničko ime i postavlja atribut korisnik na unetu vrednost samo ako je uneto korisničko ime različito od null i reči "nepoznato". U suprotnom, metoda ispisuje reč "GRESKA" na ekranu.**(null vrednost, poređenje dva stringa equals metodom)**
+4. Metodu **postaviKorisnika** koja kao parametar prima korisničko ime i postavlja atribut korisnik na unetu vrednost samo ako je uneto korisničko ime različito od null i reči "nepoznato". U suprotnom, metoda ispisuje reč "GRESKA" na ekranu.
 
-5. Metodu **postaviPoruku** koja kao parametar prima tekst poruke i postavlja atribut poruka na unetu vrednost ako je uneta poruka različita od null, nije prazan String i dužine je do 140 znakova. U suprotnom, metoda ispisuje reč "GRESKA" na ekranu. **(prazan String, length metoda)**
+5. Metodu **postaviPoruku** koja kao parametar prima tekst poruke i postavlja atribut poruka na unetu vrednost ako je uneta poruka različita od null, nije prazan String i dužine je do 140 znakova. U suprotnom, metoda ispisuje reč "GRESKA" na ekranu. 
 
-6. Metodu **prebrojHash** koja prebrojava i vraća koliko ima heš tagova (hash tag) u tekstu poruke. Svaki heš tag počinje znakom #. **(charAt metoda, prolazak kroz String slovo po slovo)**
+6. Metodu **prebrojHash** koja prebrojava i vraća koliko ima heš tagova (hash tag) u tekstu poruke. Svaki heš tag počinje znakom #. 
 
-7. Metodu **prebrojReci** koja prebrojava i vraća koliko ima reči u tekstu poruke. Smatrati da se između svake dve reči nalazi blanko znak. **(split metoda)**
+7. Metodu **prebrojReci** koja prebrojava i vraća koliko ima reči u tekstu poruke. Smatrati da se između svake dve reči nalazi blanko znak.
 
-8. Metodu **ispisi** koja na ekranu ispisuje korisnika, poruku i vreme poruke uz odgovarajući tekst. **(nadovezivanje Stringova korišćenjem operatora “+”, getTime metoda)**
+8. Metodu **ispisi** koja na ekranu ispisuje korisnika, poruku i vreme poruke uz odgovarajući tekst. 
 
-9. Metodu **proveriRodjendan** koja kao parametar prima datum rođenja korisnika (GregorianCalendar). Metoda prvo proverava da li je uneti različit od null i da li se odnosi na neki trenutak u prošlosti. Ako je tako, metoda proverava da li je korisnik ovu Twitter poruku napisao na svoj rođendan. Ako jeste, metoda vraća true, a u svim ostalim situacijama metoda vraća false. **(get metoda, konstante klase GregorianCalendar, before i after metode)**
+9. Metodu **proveriRodjendan** koja kao parametar prima datum rođenja korisnika (GregorianCalendar). Metoda prvo proverava da li je uneti različit od null i da li se odnosi na neki trenutak u prošlosti. Ako je tako, metoda proverava da li je korisnik ovu Twitter poruku napisao na svoj rođendan. Ako jeste, metoda vraća true, a u svim ostalim situacijama metoda vraća false.
 
-Napraviti klasu **ProbaTwitterPoruka** u paketu **zadatak1** koja u main metodi pravi jedan objekat klase TwitterPoruka i postavlja da je korisnik "pera121", a da je poruka "Ovo je #moja prva #poruka". Ispisati sve podatke o poruci, kao i koliko ima reči i heš tagova u njoj. Onda napraviti GregorianCalendar sa datumom 27.10.2001. i proveriti da li je korisnik napisao poruku na svoj rođendan.**(set metoda)**
+Napraviti klasu **ProbaTwitterPoruka** u paketu **zadatak1** koja u main metodi pravi jedan objekat klase TwitterPoruka i postavlja da je korisnik "pera121", a da je poruka "Ovo je #moja prva #poruka". Ispisati sve podatke o poruci, kao i koliko ima reči i heš tagova u njoj. Onda napraviti GregorianCalendar sa datumom 27.10.2001. i proveriti da li je korisnik napisao poruku na svoj rođendan.
 
 
 ## Zadatak 2
