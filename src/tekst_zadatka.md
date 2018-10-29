@@ -15,7 +15,7 @@ Napraviti klasu **TwitterPoruka** u paketu **zadatak1** koja ima:
 
 5. Metodu **postaviPoruku** koja kao parametar prima tekst poruke i postavlja atribut poruka na unetu vrednost ako je uneta poruka različita od null, nije prazan String i dužine je do 140 znakova. U suprotnom, metoda ispisuje reč "GRESKA" na ekranu. 
 
-6. Metodu **prebrojHash** koja prebrojava i vraća koliko ima heš tagova (hash tag) u tekstu poruke. Svaki heš tag počinje znakom #. 
+6. Metodu **prebrojHash** koja prebrojava i vraća koliko ima heš tagova (hash tag) u tekstu poruke. Svaki heš tag počinje znakom #, pri čemu posle tog znaka ne sme da ide znak blanko. 
 
 7. Metodu **prebrojReci** koja prebrojava i vraća koliko ima reči u tekstu poruke. Smatrati da se između svake dve reči nalazi blanko znak.
 
