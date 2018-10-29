@@ -25,8 +25,8 @@ public class TwitterPoruka {
 	int prebrojHash() {
 		int brojac = 0;
 		
-		for(int i=0;i<poruka.length()-1;i++)
-			if (poruka.charAt(i) == '#' && poruka.charAt(i+1) != ' ')
+		for(int i=0;i<poruka.length();i++)
+			if (poruka.charAt(i) == '#')
 				brojac++;
 		
 		return brojac;
