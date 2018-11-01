@@ -9,7 +9,7 @@ Napraviti klasu **TwitterPoruka** u paketu **zadatak1** koja ima:
 
 2. Atribut **poruka** koji predstavlja poruku koju je korisnik napisao. Početna vrednost je reč "nepoznato".
 
-3. Atribut **vreme** koji predstavlja datum i vreme kad je poruka objavljena. Početna vrednost je trenutni datum i vreme.
+3. Atribut **datum** koji predstavlja datum i vreme kad je poruka objavljena. Početna vrednost je trenutni datum i vreme.
 
 4. Metodu **postaviKorisnika** koja kao parametar prima korisničko ime i postavlja atribut korisnik na unetu vrednost samo ako je uneto korisničko ime različito od null i reči "nepoznato". U suprotnom, metoda ispisuje reč "GRESKA" na ekranu.
 
@@ -35,7 +35,7 @@ Napraviti klasu **IstorijskiDogadjaj** u paketu **zadatak2** koja ima:
 
 2. Atribut **datum** koji je tipa GregorianCalendar.
 
-3. Konstruktor koji prima četiri parametra: String i tri cela broja. Prvi parametar predstavlja naziv događaja dok naredna tri predstavljaju godinu, mesec i dan kada se događaj odigrao. Ovaj konstruktor postavlja vrednosti odgovarajućih atributa klase i to samo ako je uneti naziv događaja različit od null i dužine bar 5 znakova, i ako su svi uneti brojevi veći od nule. Ako to nije slučaj, konstruktor ispisuje reč "GRESKA" na ekranu.
+3. Konstruktor koji prima četiri parametra: String i tri cela broja. Prvi parametar predstavlja naziv događaja dok naredna tri predstavljaju godinu, mesec i dan kada se događaj odigrao. Ovaj konstruktor postavlja vrednosti odgovarajućih atributa klase i to samo ako je uneti naziv događaja različit od null i dužine bar 5 znakova, i ako su svi uneti brojevi veći od nule (mesec moze da bude i nula). Ako to nije slučaj, konstruktor ispisuje reč "GRESKA" na ekranu.
 
 4. Metodu **vratiPreKoliko** koja kao povratnu vrednost vraća pre koliko godina se desio taj istorijski događaj (u odnosu na trenutnu godinu).
 
