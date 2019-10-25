@@ -69,7 +69,7 @@ public class TwitterPorukaTest {
 			// Vracanje System.out na staro
 			System.setOut(pom);
 
-			assertTrue("Za unet NULL String NE ispisuje se rec GRESKA na ekranu", ispis.trim().equalsIgnoreCase("GRESKA"));
+			assertTrue("Za unet NULL String NE ispisuje se rec GRESKA na ekranu", ispis.toString().toLowerCase().contains("GRESKA".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(pom);
 			e.printStackTrace();
@@ -96,7 +96,7 @@ public class TwitterPorukaTest {
 			// Vracanje System.out na staro
 			System.setOut(pom);
 
-			assertTrue("Za unet String 'nepoznato' NE ispisuje se rec GRESKA na ekranu", ispis.trim().equalsIgnoreCase("GRESKA"));
+			assertTrue("Za unet String 'nepoznato' NE ispisuje se rec GRESKA na ekranu", ispis.toString().toLowerCase().contains("GRESKA".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(pom);
 			e.printStackTrace();
@@ -131,7 +131,7 @@ public class TwitterPorukaTest {
 			// Vracanje System.out na staro
 			System.setOut(pom);
 
-			assertTrue("Za unet NULL String NE ispisuje se rec GRESKA na ekranu", ispis.trim().equalsIgnoreCase("GRESKA"));
+			assertTrue("Za unet NULL String NE ispisuje se rec GRESKA na ekranu", ispis.toString().toLowerCase().contains("GRESKA".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(pom);
 			e.printStackTrace();
@@ -160,7 +160,7 @@ public class TwitterPorukaTest {
 			// Vracanje System.out na staro
 			System.setOut(pom);
 
-			assertTrue("Za unetu predugacku poruku NE ispisuje se rec GRESKA na ekranu", ispis.trim().equalsIgnoreCase("GRESKA"));
+			assertTrue("Za unetu predugacku poruku NE ispisuje se rec GRESKA na ekranu", ispis.toString().toLowerCase().contains("GRESKA".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(pom);
 			e.printStackTrace();

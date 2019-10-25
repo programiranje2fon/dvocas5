@@ -54,7 +54,7 @@ public class IstorijskiDogadjajTest {
 			// Vracanje System.out na staro
 			System.setOut(pom);
 
-			assertTrue("Za unet NULL naziv NE ispisuje se rec GRESKA na ekranu", ispis.trim().equalsIgnoreCase("GRESKA"));
+			assertTrue("Za unet NULL naziv NE ispisuje se rec GRESKA na ekranu", ispis.toString().toLowerCase().contains("GRESKA".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(pom);
 			e.printStackTrace();
@@ -81,7 +81,7 @@ public class IstorijskiDogadjajTest {
 			// Vracanje System.out na staro
 			System.setOut(pom);
 
-			assertTrue("Za unet prekratak naziv NE ispisuje se rec GRESKA na ekranu", ispis.trim().equalsIgnoreCase("GRESKA"));
+			assertTrue("Za unet prekratak naziv NE ispisuje se rec GRESKA na ekranu", ispis.toString().toLowerCase().contains("GRESKA".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(pom);
 			e.printStackTrace();
@@ -108,7 +108,7 @@ public class IstorijskiDogadjajTest {
 			// Vracanje System.out na staro
 			System.setOut(pom);
 
-			assertTrue("Za unetu negativnu godinu NE ispisuje se rec GRESKA na ekranu", ispis.trim().equalsIgnoreCase("GRESKA"));
+			assertTrue("Za unetu negativnu godinu NE ispisuje se rec GRESKA na ekranu", ispis.toString().toLowerCase().contains("GRESKA".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(pom);
 			e.printStackTrace();
@@ -135,7 +135,7 @@ public class IstorijskiDogadjajTest {
 			// Vracanje System.out na staro
 			System.setOut(pom);
 
-			assertTrue("Za unet negativan mesec NE ispisuje se rec GRESKA na ekranu", ispis.trim().equalsIgnoreCase("GRESKA"));
+			assertTrue("Za unet negativan mesec NE ispisuje se rec GRESKA na ekranu", ispis.toString().toLowerCase().contains("GRESKA".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(pom);
 			e.printStackTrace();
@@ -162,7 +162,7 @@ public class IstorijskiDogadjajTest {
 			// Vracanje System.out na staro
 			System.setOut(pom);
 
-			assertTrue("Za unet negativan dan NE ispisuje se rec GRESKA na ekranu", ispis.trim().equalsIgnoreCase("GRESKA"));
+			assertTrue("Za unet negativan dan NE ispisuje se rec GRESKA na ekranu", ispis.toString().toLowerCase().contains("GRESKA".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(pom);
 			e.printStackTrace();
