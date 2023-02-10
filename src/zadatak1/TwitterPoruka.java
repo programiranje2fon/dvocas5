@@ -1,12 +1,12 @@
 package zadatak1;
 
-import java.util.GregorianCalendar;
+import java.time.LocalDate;
 
 public class TwitterPoruka {
 	
 	String korisnik = "nepoznato";
 	String poruka = "nepoznato";
-	GregorianCalendar datum = new GregorianCalendar();
+	LocalDate datum = LocalDate.now();
 	
 	void postaviKorisnika (String k) {
 		if (k != null && !k.equals("nepoznato"))
@@ -39,19 +39,19 @@ public class TwitterPoruka {
 	
 	void ispisi() {
 		System.out.println("Korisnik: " + korisnik);
-		System.out.println("Datum: " + datum.getTime());
+		System.out.println("Datum: " + datum);
 		System.out.println("Poruka: " + poruka);
 	}
 	
-	boolean proveriRodjendan(GregorianCalendar datumRodjenja) {
-		if (datumRodjenja == null || datumRodjenja.after(new GregorianCalendar()))
+	boolean proveriRodjendan(LocalDate datumRodjenja) {
+		if (datumRodjenja == null || datumRodjenja.isAfter(LocalDate.now()))
 			return false;
 		
-		int mesecRodjenja = datumRodjenja.get(GregorianCalendar.MONTH);
-		int danRodjenja = datumRodjenja.get(GregorianCalendar.DAY_OF_MONTH);
+		int mesecRodjenja = datumRodjenja.getMonthValue();
+		int danRodjenja = datumRodjenja.getDayOfMonth();
 		
-		int mesecPoruke = datum.get(GregorianCalendar.MONTH);
-		int danPoruke = datum.get(GregorianCalendar.DAY_OF_MONTH);
+		int mesecPoruke = datum.getMonthValue();
+		int danPoruke = datum.getDayOfMonth();
 		
 		if (mesecRodjenja == mesecPoruke && danRodjenja == danPoruke)
 			return true;

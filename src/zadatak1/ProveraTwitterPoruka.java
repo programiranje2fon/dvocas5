@@ -1,5 +1,6 @@
 package zadatak1;
 
+import java.time.LocalDate;
 import java.util.GregorianCalendar;
 
 public class ProveraTwitterPoruka {
@@ -17,9 +18,7 @@ public class ProveraTwitterPoruka {
 
 		System.out.println("Broj reci: " + tp.prebrojReci());
 		
-		GregorianCalendar rodjendan = new GregorianCalendar();
-		
-		rodjendan.set(2001, 9, 27);
+		LocalDate rodjendan = LocalDate.of(2000, 2, 10); //10 februar 2000. godine
 		
 		System.out.println("Napisano na rodjendan:" + tp.proveriRodjendan(rodjendan));
 	}

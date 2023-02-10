@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.time.LocalDate;
 import java.util.GregorianCalendar;
 
 import org.junit.After;
@@ -36,10 +37,10 @@ public class TwitterPorukaTest {
 	
 	@Test (timeout = 2000)
 	public void atribut_datum() {
-		GregorianCalendar dat = new GregorianCalendar();		
-		assertEquals("Pocetna vrednost nije trenutni datum i vreme", dat.get(GregorianCalendar.YEAR), instance.datum.get(GregorianCalendar.YEAR));
-		assertEquals("Pocetna vrednost nije trenutni datum i vreme", dat.get(GregorianCalendar.MONTH), instance.datum.get(GregorianCalendar.MONTH));
-		assertEquals("Pocetna vrednost nije trenutni datum i vreme", dat.get(GregorianCalendar.DAY_OF_MONTH), instance.datum.get(GregorianCalendar.DAY_OF_MONTH));
+		LocalDate dat = LocalDate.now();	
+		assertEquals("Pocetna vrednost nije trenutni datum i vreme", dat.getYear(), instance.datum.getYear());
+		assertEquals("Pocetna vrednost nije trenutni datum i vreme", dat.getMonthValue(), instance.datum.getMonthValue());
+		assertEquals("Pocetna vrednost nije trenutni datum i vreme", dat.getDayOfMonth(), instance.datum.getDayOfMonth());
 	}
 
 	@Test (timeout = 2000)
@@ -183,18 +184,16 @@ public class TwitterPorukaTest {
 
 	@Test (timeout = 2000)
 	public void metoda_proveriRodjendan_True() {
-		GregorianCalendar rodjendan = new GregorianCalendar();
+		LocalDate rodjendan = LocalDate.now();
 		
-		rodjendan.set(2001, rodjendan.get(GregorianCalendar.MONTH), rodjendan.get(GregorianCalendar.DAY_OF_MONTH));
+		rodjendan.withYear(2001);
 		
 		assertTrue("Kad se unese danasnji dan i mesec ali 2001. godine kao datum rodjenja, metoda ne vraca true", instance.proveriRodjendan(rodjendan));
 	}
 	
 	@Test (timeout = 2000)
 	public void metoda_proveriRodjendan_False() {
-		GregorianCalendar rodjendan = new GregorianCalendar();
-		
-		rodjendan.set(2004, 1, 29);
+		LocalDate rodjendan = LocalDate.of(2004, 2, 29);
 		
 		assertFalse("Kad se unese 29.2.2004. godine kao datum rodjenja, metoda ne vraca false", instance.proveriRodjendan(rodjendan));
 	}
@@ -206,9 +205,8 @@ public class TwitterPorukaTest {
 	
 	@Test (timeout = 2000)
 	public void metoda_proveriRodjendan_BuduciDatum() {
-		GregorianCalendar rodjendan = new GregorianCalendar();
-		
-		rodjendan.set(rodjendan.get(GregorianCalendar.YEAR)+1 , rodjendan.get(GregorianCalendar.MONTH), rodjendan.get(GregorianCalendar.DAY_OF_MONTH));
+		LocalDate date = LocalDate.now();
+		LocalDate rodjendan = LocalDate.of(date.getYear()+1, 2, 29);
 
 		assertEquals("Kad se unese datum rodjenja iz BUDUCNOSTI, metoda ne vraca false", false, instance.proveriRodjendan(rodjendan));
 	}
