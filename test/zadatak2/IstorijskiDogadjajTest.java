@@ -29,9 +29,9 @@ public class IstorijskiDogadjajTest {
 		instance = new IstorijskiDogadjaj("Oslobadjanje Beograda", 1945, 10, 20);
 		
 		assertEquals("Konstruktor ne postavlja naziv kako treba", "Oslobadjanje Beograda", instance.naziv);
-		assertEquals("Konstruktor ne postavlja godinu kako treba", 1945, instance.datum.get(GregorianCalendar.YEAR));
-		assertEquals("Konstruktor ne postavlja mesec kako treba", 9, instance.datum.get(GregorianCalendar.MONTH));
-		assertEquals("Konstruktor ne postavlja dan kako treba", 20, instance.datum.get(GregorianCalendar.DAY_OF_MONTH));		
+		assertEquals("Konstruktor ne postavlja godinu kako treba", 1945, instance.datum.getYear());
+		assertEquals("Konstruktor ne postavlja mesec kako treba", 10, instance.datum.getMonthValue());
+		assertEquals("Konstruktor ne postavlja dan kako treba", 20, instance.datum.getDayOfMonth());		
 	}
 	
 	@Test (timeout = 2000)

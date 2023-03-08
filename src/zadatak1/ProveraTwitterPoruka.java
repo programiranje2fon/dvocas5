@@ -1,7 +1,6 @@
 package zadatak1;
 
 import java.time.LocalDate;
-import java.util.GregorianCalendar;
 
 public class ProveraTwitterPoruka {
 
