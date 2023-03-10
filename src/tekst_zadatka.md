@@ -21,9 +21,9 @@ Napraviti klasu **TwitterPoruka** u paketu **zadatak1** koja ima:
 
 8. Metodu **ispisi** koja na ekranu ispisuje korisnika, poruku i vreme poruke uz odgovarajući tekst. 
 
-9. Metodu **proveriRodjendan** koja kao parametar prima datum rođenja korisnika (LocalDate). Metoda prvo proverava da li je uneti različit od null i da li se odnosi na neki trenutak u prošlosti. Ako je tako, metoda proverava da li je korisnik ovu Twitter poruku napisao na svoj rođendan. Ako jeste, metoda vraća true, a u svim ostalim situacijama metoda vraća false.
+9. Metodu **proveriRodjendan** koja kao parametar prima datum rođenja korisnika (LocalDateTime). Metoda prvo proverava da li je uneti različit od null i da li se odnosi na neki trenutak u prošlosti. Ako je tako, metoda proverava da li je korisnik ovu Twitter poruku napisao na svoj rođendan. Ako jeste, metoda vraća true, a u svim ostalim situacijama metoda vraća false.
 
-Napraviti klasu **ProbaTwitterPoruka** u paketu **zadatak1** koja u main metodi pravi jedan objekat klase TwitterPoruka i postavlja da je korisnik "pera121", a da je poruka "Ovo je #moja prva #poruka". Ispisati sve podatke o poruci, kao i koliko ima reči i heš tagova u njoj. Onda napraviti LocalDate sa datumom 27.10.2001. i proveriti da li je korisnik napisao poruku na svoj rođendan.
+Napraviti klasu **ProbaTwitterPoruka** u paketu **zadatak1** koja u main metodi pravi jedan objekat klase TwitterPoruka i postavlja da je korisnik "pera121", a da je poruka "Ovo je #moja prva #poruka". Ispisati sve podatke o poruci, kao i koliko ima reči i heš tagova u njoj. Onda napraviti LocalDateTime sa datumom 27.10.2001. i proveriti da li je korisnik napisao poruku na svoj rođendan.
 
 
 ## Zadatak 2
@@ -33,7 +33,7 @@ Napraviti klasu **IstorijskiDogadjaj** u paketu **zadatak2** koja ima:
 
 1. Atribut **naziv** koji je tipa String.
 
-2. Atribut **datum** koji je tipa LocalDate.
+2. Atribut **datum** koji je tipa LocalDateTime.
 
 3. Konstruktor koji prima četiri parametra: String i tri cela broja. Prvi parametar predstavlja naziv događaja dok naredna tri predstavljaju godinu, mesec i dan kada se događaj odigrao. Ovaj konstruktor postavlja vrednosti odgovarajućih atributa klase i to samo ako je uneti naziv događaja različit od null i dužine bar 5 znakova, i ako su svi uneti brojevi veći od nule. Ako to nije slučaj, konstruktor ispisuje reč "GRESKA" na ekranu.
 

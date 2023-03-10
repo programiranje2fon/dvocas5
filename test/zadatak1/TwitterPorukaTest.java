@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.GregorianCalendar;
 
 import org.junit.After;
@@ -37,7 +37,7 @@ public class TwitterPorukaTest {
 	
 	@Test (timeout = 2000)
 	public void atribut_datum() {
-		LocalDate dat = LocalDate.now();	
+		LocalDateTime dat = LocalDateTime.now();	
 		assertEquals("Pocetna vrednost nije trenutni datum i vreme", dat.getYear(), instance.datum.getYear());
 		assertEquals("Pocetna vrednost nije trenutni datum i vreme", dat.getMonthValue(), instance.datum.getMonthValue());
 		assertEquals("Pocetna vrednost nije trenutni datum i vreme", dat.getDayOfMonth(), instance.datum.getDayOfMonth());
@@ -184,7 +184,7 @@ public class TwitterPorukaTest {
 
 	@Test (timeout = 2000)
 	public void metoda_proveriRodjendan_True() {
-		LocalDate rodjendan = LocalDate.now();
+		LocalDateTime rodjendan = LocalDateTime.now();
 		
 		rodjendan.withYear(2001);
 		
@@ -193,7 +193,7 @@ public class TwitterPorukaTest {
 	
 	@Test (timeout = 2000)
 	public void metoda_proveriRodjendan_False() {
-		LocalDate rodjendan = LocalDate.of(2004, 2, 29);
+		LocalDateTime rodjendan = LocalDateTime.of(2004, 2, 29, 0,0,0);
 		
 		assertFalse("Kad se unese 29.2.2004. godine kao datum rodjenja, metoda ne vraca false", instance.proveriRodjendan(rodjendan));
 	}
@@ -205,8 +205,8 @@ public class TwitterPorukaTest {
 	
 	@Test (timeout = 2000)
 	public void metoda_proveriRodjendan_BuduciDatum() {
-		LocalDate date = LocalDate.now();
-		LocalDate rodjendan = LocalDate.of(date.getYear()+1, 2, 29);
+		LocalDateTime date = LocalDateTime.now();
+		LocalDateTime rodjendan = LocalDateTime.of(date.getYear()+1, 2, 29,0,0,0);
 
 		assertEquals("Kad se unese datum rodjenja iz BUDUCNOSTI, metoda ne vraca false", false, instance.proveriRodjendan(rodjendan));
 	}
