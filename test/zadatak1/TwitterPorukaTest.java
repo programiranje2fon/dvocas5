@@ -185,7 +185,7 @@ public class TwitterPorukaTest {
 	public void metoda_proveriRodjendan_True() {
 		LocalDateTime rodjendan = LocalDateTime.now();
 		
-		rodjendan.withYear(2001);
+		rodjendan = rodjendan.withYear(2001);
 		
 		assertTrue("Kad se unese danasnji dan i mesec ali 2001. godine kao datum rodjenja, metoda ne vraca true", instance.proveriRodjendan(rodjendan));
 	}
