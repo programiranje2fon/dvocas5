@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.GregorianCalendar;
+import java.time.LocalDateTime;
 
 import org.junit.After;
 import org.junit.Before;
@@ -171,7 +171,7 @@ public class IstorijskiDogadjajTest {
 
 	@Test (timeout = 2000)
 	public void metoda_vratiPreKoliko() {
-		int trenutnaGodina = new GregorianCalendar().get(GregorianCalendar.YEAR);
+		int trenutnaGodina = LocalDateTime.now().getYear();
 		
 		assertEquals("Za dogadjaj iz 1945 godine, ne vraca da je bio pre "+(trenutnaGodina - 1945)+" godina je bio", 
 				trenutnaGodina - 1945, instance.vratiPreKoliko());
