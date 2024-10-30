@@ -205,7 +205,7 @@ public class TwitterPorukaTest {
 	@Test (timeout = 2000)
 	public void metoda_proveriRodjendan_BuduciDatum() {
 		LocalDateTime date = LocalDateTime.now();
-		LocalDateTime rodjendan = LocalDateTime.of(date.getYear()+1, 2, 29,0,0,0);
+		LocalDateTime rodjendan = LocalDateTime.of(date.getYear()+1, 2, 20,0,0,0);
 
 		assertEquals("Kad se unese datum rodjenja iz BUDUCNOSTI, metoda ne vraca false", false, instance.proveriRodjendan(rodjendan));
 	}
